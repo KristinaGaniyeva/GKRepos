@@ -9,10 +9,10 @@ public class Second {
         System.out.println("Введите argument: ");
         Scanner scanner = new Scanner(System.in);
         String s = scanner.nextLine();
-        System.out.println(Str(s));
+        System.out.println(stringWithArgument(s));
     }
 
-    private static StringBuilder Str(String s) {
+    private static StringBuilder stringWithArgument(String s) {
         StringBuilder sb = new StringBuilder("Hello, ");
         sb.append(" ");
         sb.append(s);
@@ -20,4 +20,3 @@ public class Second {
         return sb;
     }
 }
-
