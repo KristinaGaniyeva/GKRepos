@@ -1,1 +1,1 @@
-# Repository for the first tasks
+# Repository for practical tasks
