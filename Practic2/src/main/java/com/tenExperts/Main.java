@@ -13,7 +13,7 @@ public class Main {
      */
     public static void main(final String [] args) {
         PairSummater summater = new PairSummater();
-        int [] mass = {2, 2, 5, 5, 5};
+        int [] mass = {-10, -5, -5, -5};
         try {
             System.out.println(summater.sum(mass));
         } catch (ArraySummaterException e) {
