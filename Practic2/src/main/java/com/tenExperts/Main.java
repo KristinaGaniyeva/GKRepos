@@ -13,9 +13,10 @@ public class Main {
      */
     public static void main(final String [] args) {
         PairSummater summater = new PairSummater();
-        int [] mass = {-10, -5, -5, -5};
+        int [] mass = {10, 5, -5, 5, -8, -7};
         try {
-            System.out.println(summater.sum(mass));
+            StringBuilder sb = new StringBuilder();
+            System.out.println(sb.append("Maximum element of the sum of pairs: ").append(summater.sum(mass)));
         } catch (ArraySummaterException e) {
             System.out.println("Inputed invalid array");
         }
