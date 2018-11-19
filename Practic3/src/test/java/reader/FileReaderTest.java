@@ -17,9 +17,8 @@ public class FileReaderTest {
 
     @Test
     public void testReadLine() throws IOException {
-        String  str = "File.txt line: 1 this is first string\n" +
-                "File.txt line: 2 second string\n";
-        String result = fileReader.readLine();
+        String  str = "File.txt line: 1 this is first string";
+        String result = fileReader.readLine(1);
         assertEquals(str, result);
     }
 }
