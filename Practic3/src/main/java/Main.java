@@ -1,5 +1,5 @@
-import reader.Example;
-import reader.FileReader;
+import it.sevenbits.reader.Example;
+import it.sevenbits.reader.FileReader;
 
 import java.io.*;
 

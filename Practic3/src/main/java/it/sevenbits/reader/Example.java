@@ -1,4 +1,4 @@
-package reader;
+package it.sevenbits.reader;
 
 import java.io.IOException;
 
