@@ -25,14 +25,14 @@ public class Main {
 //        }
 //        System.out.println("File successfully written");
 
-        FileReader fileReader = new FileReader();
+
+        FileReader fileReader = null;
         try {
-            for (int strNumber = 1; strNumber < 3; strNumber++) {
-                System.out.println(fileReader.readLine(strNumber));
-            }
+            fileReader = new FileReader();
         } catch (IOException e) {
-            System.out.println("Error");
+            System.out.println("File not found");
         }
+        System.out.println(fileReader.readLine());
     }
 }
 
