@@ -1,12 +1,18 @@
 package it.sevenbits.reader;
 
-import java.io.IOException;
-
+/**
+ * Class Example
+ */
 public class Example {
-    public int getLongestLineCharsCount(FileReader reader) throws IOException {
+    /**
+     * The class finds the maximum string length
+     * @param reader fileReader
+     * @return strMax - maximum value
+     */
+    public int getLongestLineCharsCount(final FileReader reader) {
         int strMax = 0;
         int strTemp;
-        for (int i = 0; i < reader.list.size(); i++) {
+        while (reader.hasMoreLines()) {
             strTemp = reader.readLine().length();
             if (strMax < strTemp) {
                 strMax = strTemp;
