@@ -1,2 +1,0 @@
-this is first string
-second string
