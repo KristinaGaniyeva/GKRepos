@@ -17,22 +17,35 @@ public class Main {
         hashMap.put(2, "two");
         ArrayList<Integer> key = new ArrayList<>(hashMap.keySet());
         ArrayList<String> value = new ArrayList<>(hashMap.values());
-        System.out.println("Key " + key + "\n" + "Value " + value + "\n");
+        System.out.println("Key: " + key + "\n" + "Value: " + value + "\n");
+
 
         ListsProcessing listsProcessing = new ListsProcessing();
         System.out.println("Key - first letter, Value - last letter: " + listsProcessing.getFirstAndLastLetter() + "\n");
 
-        ArrayList<Integer> list = new ArrayList<>();
-        list.add(1);
-        list.add(2);
-        list.add(4);
-        list.add(8);
-        Set<Integer> set = new HashSet<>();
-        set.add(1);
-        set.add(6);
-        set.add(7);
-        set.add(2);
-        System.out.println("List disjoint elements" + listsProcessing.getListSet(list, set));
+        Set<Integer> firstSet = new HashSet<>();
+        firstSet.add(1);
+        firstSet.add(2);
+        firstSet.add(3);
+
+        Set<Integer> secondSet = new HashSet<>();
+        secondSet.add(4);
+        secondSet.add(5);
+        secondSet.add(6);
+
+        List<Set<Integer>> list = new ArrayList<>();
+        list.add(firstSet);
+        list.add(secondSet);
+
+        ArrayList<Integer> thirdSet = new ArrayList<>();
+
+        thirdSet.add(1);
+        thirdSet.add(2);
+        thirdSet.add(3);
+
+        Set<List> set = new HashSet<>();
+        set.add(thirdSet);
+        System.out.println("List disjoint elements: " + listsProcessing.getListSet(list, set));
     }
 }
 

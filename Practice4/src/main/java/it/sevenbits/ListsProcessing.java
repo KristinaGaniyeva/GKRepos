@@ -1,9 +1,6 @@
 package it.sevenbits;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class ListsProcessing {
     public HashMap<Character, Character> getFirstAndLastLetter() {
@@ -19,12 +16,11 @@ public class ListsProcessing {
         return hashMap;
     }
 
-
-    public List<Integer> getListSet(final ArrayList<Integer> list, final Set<Integer> set) {
-        ArrayList<Integer> listResult = new ArrayList<>();
-        for (Integer aList : list) {
-            if (set.add(aList)) {
-                listResult.add(aList);
+    public List<Set<Integer>> getListSet(final List<Set<Integer>> list, final Set<List> set) {
+        List<Set<Integer>> listResult = new ArrayList<>();
+        for (int i = 0; i < list.size(); i++) {
+            if (!(list.contains(set))) {
+                listResult.add(list.get(i));
             }
         }
         return listResult;
