@@ -16,11 +16,14 @@ public class ListsProcessing {
         return hashMap;
     }
 
-    public List<Set<Integer>> getListSet(final List<Set<Integer>> list, final Set<List> set) {
-        List<Set<Integer>> listResult = new ArrayList<>();
-        for (int i = 0; i < list.size(); i++) {
-            if (!(list.contains(set))) {
-                listResult.add(list.get(i));
+    public List<Set<Integer>> getListSet(final List<Set<Integer>> list, final Set<Integer> set) {
+        List<Set<Integer>> listResult = new ArrayList<>(list);
+        for (Set<Integer> aList : list) {
+            for (int element : set) {
+                if (aList.contains(element)) {
+                    listResult.remove(aList);
+                    break;
+                }
             }
         }
         return listResult;

@@ -19,7 +19,6 @@ public class Main {
         ArrayList<String> value = new ArrayList<>(hashMap.values());
         System.out.println("Key: " + key + "\n" + "Value: " + value + "\n");
 
-
         ListsProcessing listsProcessing = new ListsProcessing();
         System.out.println("Key - first letter, Value - last letter: " + listsProcessing.getFirstAndLastLetter() + "\n");
 
@@ -33,18 +32,21 @@ public class Main {
         secondSet.add(5);
         secondSet.add(6);
 
+        Set<Integer> thirdSet = new HashSet<>();
+        thirdSet.add(7);
+        thirdSet.add(8);
+        thirdSet.add(9);
+
         List<Set<Integer>> list = new ArrayList<>();
         list.add(firstSet);
         list.add(secondSet);
+        list.add(thirdSet);
 
-        ArrayList<Integer> thirdSet = new ArrayList<>();
+        Set<Integer> set = new HashSet<>();
+        set.add(1);
+        set.add(2);
+        set.add(3);
 
-        thirdSet.add(1);
-        thirdSet.add(2);
-        thirdSet.add(3);
-
-        Set<List> set = new HashSet<>();
-        set.add(thirdSet);
         System.out.println("List disjoint elements: " + listsProcessing.getListSet(list, set));
     }
 }
